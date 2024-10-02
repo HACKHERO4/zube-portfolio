@@ -1,11 +1,12 @@
+import React from 'react';
 import Image from 'next/image';
+import ParallaxBackground from './components/ParallaxBackground';
 import profilePic from './images/profileImg.png';
 import pat1 from './images/pat1.png';
 import { jost } from './fonts';
 import { Allura } from 'next/font/google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faPhone,
   faWhatsapp,
   faLinkedin,
   faTwitter,
@@ -25,26 +26,23 @@ export default function Home() {
     <section
       className={`min-h-screen flex items-center bg-gray-900 text-white relative overflow-hidden ${jost.className}`}
     >
-      {/* Background Images - Now smaller and in the top-right corner */}
-      <div className="absolute top-0 right-0 w-1/2 h-1/2 opacity-10 z-0">
-        <Image
-          src={pat1}
-          alt="Decorative circle pattern"
-          layout="fill"
-          objectFit="contain"
-        />
-      </div>
-      
+      {/* Parallax Background */}
+      <ParallaxBackground />
+
       {/* Decorative Text - Positioned Behind Other Elements */}
       <div
-        className="fixed bottom-4 right-4 px-4 py-2 text-4xl md:text-9xl font-bold text-gray-800 opacity-10 z-10 text-right"
+        className="absolute inset-0 flex items-end justify-end px-4 py-2 text-4xl md:text-9xl font-bold text-gray-800 opacity-10 z-10 pointer-events-none overflow-hidden"
         aria-hidden="true"
       >
-        Web, Mobile & Blockchain Developer
+        <div className="text-right whitespace-nowrap">
+          Web, Mobile & Blockchain Developer
+        </div>
       </div>
-      
-      <div className="container mx-auto px-4 z-20">
+
+      {/* Main Content */}
+      <div className="container mx-auto px-4 z-20 relative">
         <div className="flex flex-col md:flex-row items-center">
+          {/* Left Section */}
           <div className="md:w-1/2 z-20">
             <div className="mb-4">
               <span className="text-3xl font-bold text-green-500">Hello, </span>
@@ -70,9 +68,7 @@ export default function Home() {
               I have rich experience in web, blockchain and mobile application development. I also have 6 years of experience in game development using Unity. I love to talk with you about our unique.
             </p>
             <div className="flex space-x-4 mb-6">
-              <a href="#" className="text-2xl">
-                <FontAwesomeIcon icon={faPhone} className="text-2xl text-green-500" />
-              </a>
+            
               <a href="#" className="text-2xl">
                 <FontAwesomeIcon icon={faWhatsapp} className="text-2xl text-green-500" />
               </a>
@@ -92,11 +88,13 @@ export default function Home() {
               </a>
             </div>
           </div>
+
+          {/* Right Section */}
           <div className="md:w-1/2 relative mt-10 md:mt-0">
             <div className="relative w-96 h-96 mx-auto z-20">
               {/* Glassy circle background */}
-              <div className="absolute inset-0 bg-green-100 bg-opacity-50 backdrop-filter backdrop-blur-md rounded-full"></div>
-              
+              <div className="absolute inset-0 bg-green-100 bg-opacity-10 backdrop-filter backdrop-blur-md rounded-full"></div>
+
               {/* Profile image */}
               <div className="absolute inset-0 overflow-hidden rounded-full">
                 <Image
@@ -106,21 +104,31 @@ export default function Home() {
                   objectFit="cover"
                 />
               </div>
-              
+
               {/* Experience badge */}
-              <div className="absolute -bottom-4 right-0 bg-opacity-30 backdrop-filter backdrop-blur-md bg-gray-800 text-white py-2 px-4 rounded-full z-30">
+              <div className="absolute -bottom-4 right-0 bg-green-100 bg-opacity-10 backdrop-filter backdrop-blur-md text-white py-2 px-4 rounded-full z-30">
                 <span className="text-xl font-bold">12 <span className="text-green-500">+</span></span>
-                <span className="text-xs ml-1">YEARS OF <br/>EXPERIENCE</span>
+                <span className="text-xs ml-1">YEARS OF <br />EXPERIENCE</span>
               </div>
-              
+
               {/* Projects badge */}
-              <div className="absolute -top-4 -left-4 bg-opacity-30 backdrop-filter backdrop-blur-md bg-gray-800 text-white py-2 px-4 rounded-full z-30">
+              <div className="absolute -top-4 -left-4 bg-green-100 bg-opacity-10 backdrop-filter backdrop-blur-md text-white py-2 px-4 rounded-full z-30">
                 <span className="text-xl font-bold">330</span>
-                <span className="text-xs ml-1">COMPLETED <br/>PROJECTS</span>
+                <span className="text-xs ml-1">COMPLETED <br />PROJECTS</span>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Existing Background Images */}
+      <div className="absolute top-4 right-4 w-1/4 h-1/4 opacity-10 z-0">
+        <Image
+          src={pat1}
+          alt="Decorative circle pattern"
+          layout="fill"
+          objectFit="contain"
+        />
       </div>
     </section>
   );
