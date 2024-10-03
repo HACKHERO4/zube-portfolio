@@ -113,4 +113,50 @@ body {
   height: auto;
 }
 
+/* Add CSS animation for ParallaxBackground */
+@keyframes slide {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 
+/* Keyframes for moving elements upward */
+@keyframes moveUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+/* Utility class for animation */
+.animate-move-up {
+  animation: moveUp linear infinite;
+}
+
+/* Add the following keyframes for vertical marquee animation */
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-marquee-vertical {
+  display: flex;
+  flex-direction: column;
+  animation: marquee-vertical linear infinite;
+}
+
+/* Ensure smooth looping by duplicating the content */
+.animate-marquee-vertical > div {
+  /* Duplicate the content to ensure no gaps */
+  display: flex;
+  flex-direction: column;
+}
