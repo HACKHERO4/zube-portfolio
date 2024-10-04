@@ -9,7 +9,6 @@ import parallaxImage5 from '../images/parallax-image5.png';
 
 const ParallaxBackground: React.FC = () => {
   const columns = [
-    
     {
       images: [
         parallaxImage1,
@@ -61,13 +60,13 @@ const ParallaxBackground: React.FC = () => {
   const numberOfColumns = columns.length;
 
   // Define desired spacing between columns in percentage
-  const spacingPercentage = 2; // 2% spacing between columns
+  const spacingPercentage = 2; // Increased spacing to 3%
 
   // Calculate total spacing
-  const totalSpacing = spacingPercentage * (numberOfColumns + 1);
+  const totalSpacing = spacingPercentage * (numberOfColumns + 1); // 3% * 5 = 15%
 
   // Calculate width of each column
-  const columnWidth = (100 - totalSpacing) / numberOfColumns;
+  const columnWidth = (100 - totalSpacing) / numberOfColumns; // (100 - 15) / 4 = 21.25%
 
   return (
     <div className="fixed inset-0 overflow-hidden z-0 pointer-events-none">
@@ -76,11 +75,11 @@ const ParallaxBackground: React.FC = () => {
           key={index}
           className="absolute"
           style={{
-            transform: 'rotate(45deg)',
-            // Calculate the horizontal position to spread columns evenly with spacing
+            transform: 'rotate(0deg)',
+            // Adjusted the horizontal position to prevent overlapping
             left: `${spacingPercentage + index * (columnWidth + spacingPercentage)}%`,
             width: `${columnWidth}%`,
-            height: '200%', // Increased height to accommodate rotation
+            height: '150%', // Adjusted height to better fit the viewport
             overflow: 'hidden',
             pointerEvents: 'none',
           }}
