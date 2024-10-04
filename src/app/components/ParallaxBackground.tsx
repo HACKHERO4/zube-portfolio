@@ -95,7 +95,7 @@ const ParallaxBackground: React.FC = () => {
               {column.images.map((src, imgIndex) => (
                 <div
                   key={imgIndex}
-                  className="relative w-full h-48 sm:h-64 md:h-80 lg:h-96 opacity-20"
+                  className="relative w-full h-48 sm:h-64 md:h-80 lg:h-96 opacity-15"
                   style={{ marginBottom: '1rem' }}
                 >
                   <Image
