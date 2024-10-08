@@ -166,11 +166,11 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Portfolio items */}
             {[
-              { tag: 'mobile-app', image: tonstationweb1, title: 'Tonstation', category: 'Mobile Crypto Wallet' },
-              { tag: 'mobile-game', image: pumpmwebDex1, title: 'Pumpmilitia', category: 'Mobile Defi Game' },
-              { tag: 'mobile-app', image: solgateweb1, title: 'Solgate', category: 'Mobile Crypto Wallet' },
-              { tag: 'mobile-game', video: 'https://www.youtube.com/embed/pc5j03DBYN8?si=JFf_ThjCVL61blzv&controls=0&autoplay=1&loop=1&mute=1&playlist=pc5j03DBYN8', title: 'Pumpmilitia', category: 'Mobile Defi Game' },
-            ].filter(item => activeFilter === 'all' || item.tag === activeFilter).map((item, index) => (
+              { tags: ['mobile-app', 'blockchain-app'], image: tonstationweb1, title: 'Tonstation', category: 'Mobile Crypto Wallet' },
+              { tags: ['mobile-game', 'blockchain-app'], image: pumpmwebDex1, title: 'Pumpmilitia', category: 'Mobile Defi Game' },
+              { tags: ['mobile-app', 'blockchain-app'], image: solgateweb1, title: 'Solgate', category: 'Mobile Crypto Wallet' },
+              { tags: ['mobile-game', 'blockchain-app'], video: 'https://www.youtube.com/embed/pc5j03DBYN8?si=JFf_ThjCVL61blzv&controls=0&autoplay=1&loop=1&mute=1&playlist=pc5j03DBYN8', title: 'Pumpmilitia', category: 'Mobile Defi Game' },
+            ].filter(item => activeFilter === 'all' || item.tags.includes(activeFilter)).map((item, index) => (
               <div key={index} className="bg-[#28212e] rounded-lg overflow-hidden">
                 <div className="relative h-64">
                   {item.image ? (
