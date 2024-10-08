@@ -58,10 +58,10 @@ export default function Home() {
             {/* Left Section */}
             <div className="md:w-1/2 z-20">
               <div className="mb-4">
-                <span className="text-3xl font-bold text-green-500">Hello, </span>
-                <span className="text-3xl font-bold text-500">MY NAME IS</span>
+                <span className="text-xl sm:text-3xl font-bold text-green-500">Hello, </span>
+                <span className="text-xl sm:text-3xl font-bold text-500">MY NAME IS</span>
               </div>
-              <h1 className="text-6xl font-extrabold mb-4 uppercase">
+              <h1 className="text-4xl sm:text-6xl font-extrabold mb-4 uppercase">
                 <span className="text-green-400 relative">
                   Lambert
                 </span>
@@ -70,12 +70,12 @@ export default function Home() {
                 </span>
               </h1>
               <div className="mb-6">
-                <span className="text-xl">
+                <span className="text-lg sm:text-xl">
                   Flutter, React, Blockchain{' '}
                   <strong>Developer</strong>
                 </span>
               </div>
-              <p className="mb-6">
+              <p className="mb-6 text-sm sm:text-base">
                 I have rich experience in web, blockchain and mobile application development. I also have 6 years of experience in game development using Unity. I love to talk with you about your unique projects and how we can collaborate to bring your ideas to life.
               </p>
               <div className="flex space-x-4 mb-6">
@@ -156,9 +156,9 @@ export default function Home() {
           <div className="mb-10">
             <nav className="flex space-x-6">
               <button onClick={() => filterItems('all')} className={`${activeFilter === 'all' ? 'text-green-500 border-b-2 border-green-500' : 'hover:text-green-500'} transition-colors pb-2`}>ALL</button>
-              <button onClick={() => filterItems('mobile-app')} className={`${activeFilter === 'mobile-app' ? 'text-green-500 border-b-2 border-green-500' : 'hover:text-green-500'} transition-colors pb-2`}>Mobile Apps</button>
-              <button onClick={() => filterItems('blockchain-app')} className={`${activeFilter === 'blockchain-app' ? 'text-green-500 border-b-2 border-green-500' : 'hover:text-green-500'} transition-colors pb-2`}>Blockchain Apps</button>
-              <button onClick={() => filterItems('mobile-game')} className={`${activeFilter === 'mobile-game' ? 'text-green-500 border-b-2 border-green-500' : 'hover:text-green-500'} transition-colors pb-2`}>Mobile Games</button>
+              <button onClick={() => filterItems('mobile-app')} className={`${activeFilter === 'mobile-app' ? 'text-green-500 border-b-2 border-green-500' : 'hover:text-green-500'} transition-colors pb-2`}>Apps</button>
+              <button onClick={() => filterItems('mobile-game')} className={`${activeFilter === 'mobile-game' ? 'text-green-500 border-b-2 border-green-500' : 'hover:text-green-500'} transition-colors pb-2`}>Games</button>
+              <button onClick={() => filterItems('blockchain-app')} className={`${activeFilter === 'blockchain-app' ? 'text-green-500 border-b-2 border-green-500' : 'hover:text-green-500'} transition-colors pb-2`}>Blockchain</button>
               <button onClick={() => filterItems('microservice')} className={`${activeFilter === 'microservice' ? 'text-green-500 border-b-2 border-green-500' : 'hover:text-green-500'} transition-colors pb-2`}>Microservices</button>
             </nav>
           </div>
@@ -170,8 +170,8 @@ export default function Home() {
               { tag: 'mobile-game', image: pumpmwebDex1, title: 'Pumpmilitia', category: 'Mobile Defi Game' },
               { tag: 'mobile-app', image: solgateweb1, title: 'Solgate', category: 'Mobile Crypto Wallet' },
               { tag: 'mobile-game', video: 'https://www.youtube.com/embed/pc5j03DBYN8?si=JFf_ThjCVL61blzv&controls=0&autoplay=1&loop=1&mute=1&playlist=pc5j03DBYN8', title: 'Pumpmilitia', category: 'Mobile Defi Game' },
-            ].filter(item => activeFilter === 'all' || `tag-${activeFilter}` === `tag-${item.tag}`).map((item, index) => (
-              <div key={index} className={`bg-[#28212e] rounded-lg overflow-hidden tag-${item.tag}`}>
+            ].filter(item => activeFilter === 'all' || item.tag === activeFilter).map((item, index) => (
+              <div key={index} className="bg-[#28212e] rounded-lg overflow-hidden">
                 <div className="relative h-64">
                   {item.image ? (
                     <Image
