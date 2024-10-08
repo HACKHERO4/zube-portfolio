@@ -113,6 +113,10 @@ body {
   height: auto;
 }
 
+.bg-colour-tr{
+  background-color: #1e2024;
+}
+
 
 /* Add CSS animation for ParallaxBackground */
 @keyframes slide {

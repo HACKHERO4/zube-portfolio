@@ -4,6 +4,9 @@ import Link from 'next/link';
 import ParallaxBackground from './components/ParallaxBackground';
 import profilePic from './images/profileImg.png';
 import pat1 from './images/pat1.png';
+import pumpmwebDex1 from './images/pumpmwebDex1.png';
+import solgateweb1 from './images/solgateweb1.png';
+import tonstationweb1 from './images/tonstationweb1.png';
 import { jost } from './fonts';
 import { Allura } from 'next/font/google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -26,7 +29,7 @@ export default function Home() {
   return (
     <>
       <section
-        className={`min-h-screen flex items-center bg-gray-900 text-white relative overflow-hidden ${jost.className}`}
+        className={`min-h-screen flex items-center bg-gray-950 text-white relative overflow-hidden ${jost.className}`}
       >
         {/* Parallax Background */}
         <ParallaxBackground />
@@ -53,11 +56,9 @@ export default function Home() {
               <h1 className="text-6xl font-extrabold mb-4 uppercase">
                 <span className="text-green-400 relative">
                   Lambert
-                  <span className="absolute -inset-0.5 text-gray-900 -z-10 name-outline">Lambert</span>
                 </span>
                 <span className="text-white relative ml-2">
                   Nnadi
-                  <span className="absolute -inset-0.5 text-gray-900 -z-10 name-outline">Nnadi</span>
                 </span>
               </h1>
               <div className="mb-6">
@@ -67,7 +68,7 @@ export default function Home() {
                 </span>
               </div>
               <p className="mb-6">
-                I have rich experience in web, blockchain and mobile application development. I also have 6 years of experience in game development using Unity. I love to talk with you about our unique.
+                I have rich experience in web, blockchain and mobile application development. I also have 6 years of experience in game development using Unity. I love to talk with you about your unique projects and how we can collaborate to bring your ideas to life.
               </p>
               <div className="flex space-x-4 mb-6">
                 <a href="#" className="text-2xl">
@@ -135,7 +136,7 @@ export default function Home() {
 
       {/* Updated Portfolio section */}
       <section id="portfolio" className="relative bg-[#1e2024] text-white py-20">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#1e2024] to-[#41454e] z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#28212e] to-[#7f6a94] z-0"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <h2 className="text-4xl font-bold mb-2">PORTFOLIO</h2>
@@ -147,76 +148,134 @@ export default function Home() {
           <div className="mb-10">
             <nav className="flex space-x-6">
               <Link href="#all" className="text-green-500 border-b-2 border-green-500 pb-2">ALL</Link>
-              <Link href="#video" className="hover:text-green-500 transition-colors">VIDEO</Link>
-              <Link href="#photography" className="hover:text-green-500 transition-colors">PHOTOGRAPHY</Link>
-              <Link href="#branding" className="hover:text-green-500 transition-colors">BRANDING</Link>
+              <Link href="#video" className="hover:text-green-500 transition-colors">Mobile Apps</Link>
+              <Link href="#photography" className="hover:text-green-500 transition-colors">Blockchain Apps</Link>
+              <Link href="#branding" className="hover:text-green-500 transition-colors">Mobile Games</Link>
+              <Link href="#branding" className="hover:text-green-500 transition-colors">Microservices</Link>
             </nav>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Portfolio Item 1 */}
-            <div className="bg-[#2c2e32] rounded-lg overflow-hidden">
+            <div className="bg-[#28212e] rounded-lg overflow-hidden">
               <div className="relative h-64">
                 <Image
-                  src="/path-to-zorro-image.jpg"
+                  src={tonstationweb1}
                   alt="Zorro Project"
                   layout="fill"
                   objectFit="cover"
                 />
               </div>
               <div className="p-6">
-                <span className="text-green-500 text-sm uppercase">Branding</span>
-                <h3 className="text-xl font-bold mt-2">Zorro</h3>
-                <Link href="#" className="inline-flex items-center mt-4 text-green-500 hover:underline">
-                  See project
-                  <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </Link>
+                <span className="text-green-500 text-sm uppercase">Mobile Crypto Wallet</span>
+                <h3 className="text-xl font-bold mt-2">Tonstation</h3>
+                <div className="flex space-x-4 mt-4">
+                  <Link href="#" className="inline-flex items-center text-green-500 hover:underline">
+                    See project
+                    <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </Link>
+                  <Link href="#" className="inline-flex items-center text-green-500 hover:underline">
+                    Source Code
+                    <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                  </Link>
+                </div>
               </div>
             </div>
 
             {/* Portfolio Item 2 */}
-            <div className="bg-[#2c2e32] rounded-lg overflow-hidden">
+            <div className="bg-[#28212e] rounded-lg overflow-hidden">
               <div className="relative h-64">
                 <Image
-                  src="/path-to-gooir-image.jpg"
+                  src={pumpmwebDex1}
                   alt="Gooir Project"
                   layout="fill"
                   objectFit="cover"
                 />
               </div>
               <div className="p-6">
-                <span className="text-green-500 text-sm uppercase">Branding</span>
-                <h3 className="text-xl font-bold mt-2">Gooir</h3>
-                <Link href="#" className="inline-flex items-center mt-4 text-green-500 hover:underline">
-                  See project
-                  <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </Link>
+                <span className="text-green-500 text-sm uppercase">Mobile Defi Game</span>
+                <h3 className="text-xl font-bold mt-2">Pumpmilitia</h3>
+                <div className="flex space-x-4 mt-4">
+                  <Link href="#" className="inline-flex items-center text-green-500 hover:underline">
+                    See project
+                    <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </Link>
+                  <Link href="#" className="inline-flex items-center text-green-500 hover:underline">
+                    Source Code
+                    <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                  </Link>
+                </div>
               </div>
             </div>
 
             {/* Portfolio Item 3 */}
-            <div className="bg-[#2c2e32] rounded-lg overflow-hidden">
+            <div className="bg-[#28212e] rounded-lg overflow-hidden">
               <div className="relative h-64">
                 <Image
-                  src="/path-to-explore-image.jpg"
+                  src={solgateweb1}
                   alt="Explore Project"
                   layout="fill"
                   objectFit="cover"
                 />
               </div>
               <div className="p-6">
-                <span className="text-green-500 text-sm uppercase">Video</span>
-                <h3 className="text-xl font-bold mt-2">Explore</h3>
-                <Link href="#" className="inline-flex items-center mt-4 text-green-500 hover:underline">
-                  See project
-                  <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </Link>
+                <span className="text-green-500 text-sm uppercase">Mobile Crypto Wallet</span>
+                <h3 className="text-xl font-bold mt-2">Solgate</h3>
+                <div className="flex space-x-4 mt-4">
+                  <Link href="#" className="inline-flex items-center text-green-500 hover:underline">
+                    See project
+                    <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </Link>
+                  <Link href="#" className="inline-flex items-center text-green-500 hover:underline">
+                    Source Code
+                    <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* New portfolio item with YouTube video */}
+            <div className="bg-[#28212e] rounded-lg overflow-hidden">
+              <div className="relative h-64">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/pc5j03DBYN8?si=JFf_ThjCVL61blzv&controls=0&autoplay=1&loop=1&mute=1&playlist=pc5j03DBYN8"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="p-6">
+                <span className="text-green-500 text-sm uppercase">Mobile Defi Game</span>
+                <h3 className="text-xl font-bold mt-2">Pumpmilitia</h3>
+                <div className="flex space-x-4 mt-4">
+                  <Link href="#" className="inline-flex items-center text-green-500 hover:underline">
+                    See project
+                    <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </Link>
+                  <Link href="#" className="inline-flex items-center text-green-500 hover:underline">
+                    Source Code
+                    <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

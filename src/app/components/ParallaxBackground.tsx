@@ -5,6 +5,10 @@ import Image from 'next/image';
 import parallaxImage1 from '../images/parallax-image1.png';
 import parallaxImage3 from '../images/parallax-image3.png';
 import parallaxImage5 from '../images/parallax-image5.png';
+import pumpmwebmobile1 from '../images/pumpmwebmobile1.png';
+import pumpmwebmobile2 from '../images/pumpmwebmobile2.png';
+import pumpmwebmobile3 from '../images/pumpmwebmobile3.png';
+import pumpmwebmobile4 from '../images/pumpmwebmobile4.png';
 // Import additional images as needed
 
 const ParallaxBackground: React.FC = () => {
@@ -18,18 +22,18 @@ const ParallaxBackground: React.FC = () => {
         parallaxImage3,
         parallaxImage5, // Ensures seamless looping
       ],
-      speed: 10, // Animation duration in seconds for column 1
+      speed: 20, // Animation duration in seconds for column 1
     },
     {
       images: [
-        parallaxImage3,
-        parallaxImage5,
-        parallaxImage1,
-        parallaxImage3,
-        parallaxImage5,
-        parallaxImage1, // Ensures seamless looping
+        pumpmwebmobile1,
+        pumpmwebmobile2,
+        pumpmwebmobile3,
+        pumpmwebmobile4,
+        pumpmwebmobile1,
+        pumpmwebmobile2, // Ensures seamless looping
       ],
-      speed: 15, // Animation duration in seconds for column 2
+      speed: 25, // Animation duration in seconds for column 2
     },
     {
       images: [
@@ -40,18 +44,18 @@ const ParallaxBackground: React.FC = () => {
         parallaxImage1,
         parallaxImage3, // Ensures seamless looping
       ],
-      speed: 20, // Animation duration in seconds for column 3
+      speed: 30, // Animation duration in seconds for column 3
     },
     {
       images: [
-        parallaxImage1,
-        parallaxImage3,
-        parallaxImage5,
-        parallaxImage1,
-        parallaxImage3,
-        parallaxImage5, // Ensures seamless looping
+        pumpmwebmobile1,
+        pumpmwebmobile2,
+        pumpmwebmobile3,
+        pumpmwebmobile4,
+        pumpmwebmobile1,
+        pumpmwebmobile2, // Ensures seamless looping
       ],
-      speed: 25, // Animation duration in seconds for column 4
+      speed: 35, // Animation duration in seconds for column 4
     },
     // Add more columns with different speeds if desired
   ];
