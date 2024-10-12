@@ -37,6 +37,7 @@ export default function Home() {
 
   return (
     <>
+    
       <section
         className={`min-h-screen flex items-center bg-gray-950 text-white relative overflow-hidden ${jost.className}`}
       >
@@ -154,13 +155,13 @@ export default function Home() {
             <span className={`text-3xl ${allura.className}`}>Cases</span>
           </div>
 
-          <div className="mb-10">
-            <nav className="flex space-x-6">
-              <button onClick={() => filterItems('all')} className={`${activeFilter === 'all' ? 'text-green-500 border-b-2 border-green-500' : 'hover:text-green-500'} transition-colors pb-2`}>ALL</button>
-              <button onClick={() => filterItems('mobile-app')} className={`${activeFilter === 'mobile-app' ? 'text-green-500 border-b-2 border-green-500' : 'hover:text-green-500'} transition-colors pb-2`}>Apps</button>
-              <button onClick={() => filterItems('mobile-game')} className={`${activeFilter === 'mobile-game' ? 'text-green-500 border-b-2 border-green-500' : 'hover:text-green-500'} transition-colors pb-2`}>Games</button>
-              <button onClick={() => filterItems('blockchain-app')} className={`${activeFilter === 'blockchain-app' ? 'text-green-500 border-b-2 border-green-500' : 'hover:text-green-500'} transition-colors pb-2`}>Blockchain</button>
-              <button onClick={() => filterItems('microservice')} className={`${activeFilter === 'microservice' ? 'text-green-500 border-b-2 border-green-500' : 'hover:text-green-500'} transition-colors pb-2`}>Microservices</button>
+          <div className="mb-10 overflow-x-auto">
+            <nav className="flex space-x-6 min-w-max">
+              <button onClick={() => filterItems('all')} className={`${activeFilter === 'all' ? 'text-green-500 border-b-2 border-green-500' : 'hover:text-green-500'} transition-colors pb-2 whitespace-nowrap`}>ALL</button>
+              <button onClick={() => filterItems('mobile-app')} className={`${activeFilter === 'mobile-app' ? 'text-green-500 border-b-2 border-green-500' : 'hover:text-green-500'} transition-colors pb-2 whitespace-nowrap`}>Apps</button>
+              <button onClick={() => filterItems('mobile-game')} className={`${activeFilter === 'mobile-game' ? 'text-green-500 border-b-2 border-green-500' : 'hover:text-green-500'} transition-colors pb-2 whitespace-nowrap`}>Games</button>
+              <button onClick={() => filterItems('blockchain-app')} className={`${activeFilter === 'blockchain-app' ? 'text-green-500 border-b-2 border-green-500' : 'hover:text-green-500'} transition-colors pb-2 whitespace-nowrap`}>Blockchain</button>
+              <button onClick={() => filterItems('microservice')} className={`${activeFilter === 'microservice' ? 'text-green-500 border-b-2 border-green-500' : 'hover:text-green-500'} transition-colors pb-2 whitespace-nowrap`}>Microservices</button>
             </nav>
           </div>
 
@@ -173,7 +174,7 @@ export default function Home() {
               { tags: ['mobile-game', 'blockchain-app'], video: 'https://www.youtube.com/embed/pc5j03DBYN8?si=JFf_ThjCVL61blzv&controls=0&autoplay=1&loop=1&mute=1&playlist=pc5j03DBYN8', title: 'Pumpmilitia', category: 'Mobile Defi Game' },
             ].filter(item => activeFilter === 'all' || item.tags.includes(activeFilter)).map((item, index) => (
               <div key={index} className="bg-[#28212e] rounded-lg overflow-hidden">
-                <div className="relative h-64">
+                <div className="relative h-48 md:h-64">
                   {item.image ? (
                     <Image
                       src={item.image}
@@ -193,17 +194,17 @@ export default function Home() {
                     ></iframe>
                   )}
                 </div>
-                <div className="p-6">
-                  <span className="text-green-500 text-sm uppercase">{item.category}</span>
-                  <h3 className="text-xl font-bold mt-2">{item.title}</h3>
-                  <div className="flex space-x-4 mt-4">
-                    <Link href="#" className="inline-flex items-center text-green-500 hover:underline">
+                <div className="p-4 md:p-6">
+                  <span className="text-green-500 text-xs md:text-sm uppercase">{item.category}</span>
+                  <h3 className="text-lg md:text-xl font-bold mt-2">{item.title}</h3>
+                  <div className="flex flex-col md:flex-row md:space-x-4 mt-4">
+                    <Link href="#" className="inline-flex items-center text-green-500 hover:underline text-sm md:text-base mb-2 md:mb-0">
                       See project
                       <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                       </svg>
                     </Link>
-                    <Link href="#" className="inline-flex items-center text-green-500 hover:underline">
+                    <Link href="#" className="inline-flex items-center text-green-500 hover:underline text-sm md:text-base">
                       Source Code
                       <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
