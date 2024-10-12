@@ -80,13 +80,13 @@ export default function Home() {
                 I have rich experience in web, blockchain and mobile application development. I also have 6 years of experience in game development using Unity. I love to talk with you about your unique projects and how we can collaborate to bring your ideas to life.
               </p>
               <div className="flex space-x-4 mb-6">
-                <a href="#" className="text-2xl">
+                <a href="https://github.com/lambo10" className="text-2xl">
                   <FontAwesomeIcon icon={faWhatsapp} className="text-2xl text-green-500" />
                 </a>
-                <a href="#" className="text-2xl">
+                <a href="https://www.linkedin.com/in/lambert-nnadi-842743178" className="text-2xl">
                   <FontAwesomeIcon icon={faLinkedin} className="text-2xl text-green-500" />
                 </a>
-                <a href="#" className="text-2xl">
+                <a href="https://x.com/nnadi_lambert" className="text-2xl">
                   <FontAwesomeIcon icon={faTwitter} className="text-2xl text-green-500" />
                 </a>
               </div>
@@ -331,13 +331,13 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex space-x-4 mb-4 md:mb-0">
-              <a href="#" className="text-2xl hover:text-green-500 transition-colors">
+              <a href="https://github.com/lambo10" className="text-2xl hover:text-green-500 transition-colors">
                 <FontAwesomeIcon icon={faGithub} />
               </a>
-              <a href="#" className="text-2xl hover:text-green-500 transition-colors">
+              <a href="https://www.linkedin.com/in/lambert-nnadi-842743178" className="text-2xl hover:text-green-500 transition-colors">
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
-              <a href="#" className="text-2xl hover:text-green-500 transition-colors">
+              <a href="https://x.com/nnadi_lambert" className="text-2xl hover:text-green-500 transition-colors">
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
             </div>
