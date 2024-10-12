@@ -16,6 +16,7 @@ import {
   faWhatsapp,
   faLinkedin,
   faTwitter,
+  faGithub, // Add this line
 } from '@fortawesome/free-brands-svg-icons';
 
 import '@fortawesome/fontawesome-svg-core/styles.css';
@@ -299,11 +300,11 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { skill: "Node.js", percentage: 90, description: "Building scalable and efficient server-side applications with Node.js" },
-              { skill: "React", percentage: 85, description: "Creating dynamic and responsive user interfaces using React" },
-              { skill: "Next.js", percentage: 80, description: "Developing high-performance, SEO-friendly React applications with Next.js" },
-              { skill: "PHP", percentage: 75, description: "Crafting robust backend solutions and content management systems with PHP" },
-              { skill: "Unity", percentage: 70, description: "Designing and developing interactive 2D and 3D games using Unity engine" },
-              { skill: "TypeScript", percentage: 85, description: "Enhancing JavaScript development with static typing and advanced features" },
+              { skill: "React", percentage: 95, description: "Creating dynamic and responsive user interfaces using React" },
+              { skill: "Next.js", percentage: 95, description: "Developing high-performance, SEO-friendly React applications with Next.js" },
+              { skill: "PHP", percentage: 90, description: "Crafting robust backend solutions and content management systems with PHP" },
+              { skill: "Unity", percentage: 85, description: "Designing and developing interactive 2D and 3D games using Unity engine" },
+              { skill: "TypeScript", percentage: 90, description: "Enhancing JavaScript development with static typing and advanced features" },
             ].map((item, index) => (
               <div key={index} className="mb-6">
                 <div className="flex justify-between items-center mb-2">
@@ -324,6 +325,28 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Footer section */}
+      <footer className="relative bg-[#1e2024] text-white py-8">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#28212e] to-[#28212e] z-0"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex space-x-4 mb-4 md:mb-0">
+              <a href="#" className="text-2xl hover:text-green-500 transition-colors">
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+              <a href="#" className="text-2xl hover:text-green-500 transition-colors">
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
+              <a href="#" className="text-2xl hover:text-green-500 transition-colors">
+                <FontAwesomeIcon icon={faTwitter} />
+              </a>
+            </div>
+            <div className="text-sm">
+              &copy; 2024 LambertNnadi.com
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
