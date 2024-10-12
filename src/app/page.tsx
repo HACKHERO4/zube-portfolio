@@ -215,6 +215,115 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Updated "What I Do" section */}
+      <section id="what-i-do" className="relative bg-[#1e2024] text-white py-20">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#7f6a94] to-[#28212e] z-0"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <h2 className="text-4xl font-bold mb-2">WHAT I DO</h2>
+          <div className="flex items-center mb-10">
+            <span className="text-green-500 mr-2">MY</span>
+            <span className={`text-3xl ${allura.className}`}>Services</span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Web Development */}
+            <div className="bg-[#28212e] rounded-lg p-6 relative overflow-hidden">
+              <div className="relative z-10">
+                <h3 className="text-xl font-bold mb-10">WEB DEVELOPMENT</h3>
+                <h4 className="text-lg font-semibold mb-2">Web Design & Logo</h4>
+                <p className="mb-4">Web designers craft the overall vision & plan for a website layout. Professional logo development: Business, Company, or Personal.</p>
+                
+              </div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 opacity-10">
+                <Image
+                  src={pat1}
+                  alt="Decorative dot pattern"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+            </div>
+
+            {/* Apps Development */}
+            <div className="bg-[#28212e] rounded-lg p-6 relative overflow-hidden">
+              <div className="relative z-10">
+                <h3 className="text-xl font-bold mb-10">APPS DEVELOPMENT</h3>
+                <h4 className="text-lg font-semibold mb-2">iOS & Android</h4>
+                <p className="mb-4">Design Software applications to run on mobile devices. Modern and mobile-ready application that will help you reach all of your marketing.</p>
+                
+              </div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 opacity-10">
+                <Image
+                  src={pat1}
+                  alt="Decorative dot pattern"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+            </div>
+
+            {/* Game Development */}
+            <div className="bg-[#28212e] rounded-lg p-6 relative overflow-hidden">
+              <div className="relative z-10">
+                <h3 className="text-xl font-bold mb-10">GAME DEVELOPMENT</h3>
+                <h4 className="text-lg font-semibold mb-2">Unity & Unreal Engine</h4>
+                <p className="mb-4">Creating games & describes the design, development and release of a game. Developing unique mobile android and ios games.</p>
+               
+              </div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 opacity-10">
+                <Image
+                  src={pat1}
+                  alt="Decorative dot pattern"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+       {/* Professional Skills section */}
+       <section id="skills-section" className="relative bg-[#1e2024] text-white py-20">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#28212e] to-[#7f6a94] z-0"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <h2 className="text-4xl font-bold mb-2">PROFESSIONAL SKILLS</h2>
+          <div className="flex items-center mb-10">
+            <span className="text-green-500 mr-2">MY</span>
+            <span className={`text-3xl ${allura.className}`}>Talent</span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { skill: "Node.js", percentage: 90, description: "Building scalable and efficient server-side applications with Node.js" },
+              { skill: "React", percentage: 85, description: "Creating dynamic and responsive user interfaces using React" },
+              { skill: "Next.js", percentage: 80, description: "Developing high-performance, SEO-friendly React applications with Next.js" },
+              { skill: "PHP", percentage: 75, description: "Crafting robust backend solutions and content management systems with PHP" },
+              { skill: "Unity", percentage: 70, description: "Designing and developing interactive 2D and 3D games using Unity engine" },
+              { skill: "TypeScript", percentage: 85, description: "Enhancing JavaScript development with static typing and advanced features" },
+            ].map((item, index) => (
+              <div key={index} className="mb-6">
+                <div className="flex justify-between items-center mb-2">
+                  <h3 className="text-lg font-semibold">{item.skill}</h3>
+                  <span className="text-green-500">{item.percentage}%</span>
+                </div>
+                <div className="w-full bg-gray-700 rounded-full h-2.5">
+                  <div 
+                    className="bg-green-500 h-2.5 rounded-full" 
+                    style={{ width: `${item.percentage}%` }}
+                  ></div>
+                </div>
+                <p className="mt-2 text-sm text-gray-400">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }
