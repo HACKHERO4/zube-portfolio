@@ -101,7 +101,7 @@ export default function Home() {
                 </a>
               </div>
               <div className="flex space-x-4">
-                <a href="#" className="bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition duration-300">
+                <a href="https://drive.google.com/file/d/1seyCzDKAFNcYUvszxoosA74qwMB_kt4a/view?usp=sharing" className="bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition duration-300">
                   Download CV
                 </a>
                 <a href="#skills-section" className="text-white px-6 py-3 rounded-full border border-white hover:bg-white hover:text-gray-900 transition duration-300">
