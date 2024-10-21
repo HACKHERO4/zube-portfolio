@@ -9,6 +9,15 @@ import pat1 from './images/pat1.png';
 import pumpmwebDex1 from './images/pumpmwebDex1.png';
 import solgateweb1 from './images/solgateweb1.png';
 import tonstationweb1 from './images/tonstationweb1.png';
+import pm_tg_bot_screens from './images/pm_tg_bot_screens.png';
+import greedygames_screens from './images/greedygames_screens.png';
+import evp_referral_service_flow_chart from './images/evp-referral-service_flow_chart.png';
+import evp_token_minner_service from './images/evp-token-minner-service.png';
+import evp_match_reward_token_minner_service_flow_chart from './images/evp-match-reward-token-minner-service.png';
+import gv_seed_sale from './images/gv_seed_sale.png';
+import gv_nfts from './images/gv_nfts.png';
+import pos_blockchain from './images/pos_blockchain.png';
+
 import { jost } from './fonts';
 import { Allura } from 'next/font/google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -162,16 +171,30 @@ export default function Home() {
               <button onClick={() => filterItems('mobile-game')} className={`${activeFilter === 'mobile-game' ? 'text-green-500 border-b-2 border-green-500' : 'hover:text-green-500'} transition-colors pb-2 whitespace-nowrap`}>Games</button>
               <button onClick={() => filterItems('blockchain-app')} className={`${activeFilter === 'blockchain-app' ? 'text-green-500 border-b-2 border-green-500' : 'hover:text-green-500'} transition-colors pb-2 whitespace-nowrap`}>Blockchain</button>
               <button onClick={() => filterItems('microservice')} className={`${activeFilter === 'microservice' ? 'text-green-500 border-b-2 border-green-500' : 'hover:text-green-500'} transition-colors pb-2 whitespace-nowrap`}>Microservices</button>
+              <button onClick={() => filterItems('contract')} className={`${activeFilter === 'contract' ? 'text-green-500 border-b-2 border-green-500' : 'hover:text-green-500'} transition-colors pb-2 whitespace-nowrap`}>Contracts</button>
             </nav>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Portfolio items */}
             {[
-              { tags: ['mobile-app', 'blockchain-app'], image: tonstationweb1, title: 'Tonstation', category: 'Mobile Crypto Wallet' },
-              { tags: ['mobile-game', 'blockchain-app'], image: pumpmwebDex1, title: 'Pumpmilitia', category: 'Mobile Defi Game' },
-              { tags: ['mobile-app', 'blockchain-app'], image: solgateweb1, title: 'Solgate', category: 'Mobile Crypto Wallet' },
-              { tags: ['mobile-game', 'blockchain-app'], video: 'https://www.youtube.com/embed/pc5j03DBYN8?si=JFf_ThjCVL61blzv&controls=0&autoplay=1&loop=1&mute=1&playlist=pc5j03DBYN8', title: 'Pumpmilitia', category: 'Mobile Defi Game' },
+              { tags: ['mobile-app', 'blockchain-app'], image: tonstationweb1, title: 'Solgate', category: 'Mobile Crypto Wallet', projectUrl: 'https://github.com/PixelDat/Solgate-mobile-app.git', sourceCodeUrl: 'https://github.com/PixelDat/Solgate-mobile-app.git' },
+              { tags: ['mobile-app', 'blockchain-app'], image: pumpmwebDex1, title: 'Pumpmilitia-web', category: 'Web-App', projectUrl: 'https://pumpmilitia.io', sourceCodeUrl: 'https://github.com/PixelDat/pumpmilitia.git' },
+              { tags: ['mobile-game', 'blockchain-app'], video: 'https://www.youtube.com/embed/pc5j03DBYN8?si=JFf_ThjCVL61blzv&controls=0&autoplay=1&loop=1&mute=1&playlist=pc5j03DBYN8', title: 'Pumpmilitia', category: 'Mobile Defi Game', projectUrl: 'https://play.google.com/store/apps/details?id=com.everpumpstudio.pumpmilitia&hl=en' },
+              { tags: ['mobile-app', 'blockchain-app'], image: greedygames_screens, title: 'GreedyGames wallet', category: 'Mobile Crypto Wallet', projectUrl: 'https://drive.google.com/file/d/18Esy4sRWaDbgU3LRudFp5nQJDmLqUF6l/view?usp=sharing', sourceCodeUrl: 'https://github.com/lambo10/greedyGames.git' },
+              { tags: ['mobile-game', 'blockchain-app'], video: 'https://www.youtube.com/embed/975aAJ0DFCg?si=TTdwMvUXEhHqlhy9&controls=0&autoplay=1&loop=1&mute=1&playlist=975aAJ0DFCg', title: 'GreedyClans', category: 'Mobile Defi Game', projectUrl: 'https://github.com/lambo10/GreedyClans.git', sourceCodeUrl: 'https://github.com/lambo10/GreedyClans.git' },
+              { tags: ['mobile-app', 'blockchain-app'], image: pm_tg_bot_screens, title: 'Pumpmilitia-Telegram-App', category: 'Telegram-App', projectUrl: 'https://github.com/PixelDat/pumpmilitia.git', sourceCodeUrl: 'https://github.com/PixelDat/pumpmilitia.git' },
+
+              { tags: ['microservice', 'blockchain-app'], image: evp_referral_service_flow_chart, title: 'evp-referral-service', category: 'Micro-Service', projectUrl: 'https://github.com/PixelDat/evp-referral-service.git', sourceCodeUrl: 'https://github.com/PixelDat/evp-referral-service.git' },
+              { tags: ['microservice', 'blockchain-app'], image: evp_token_minner_service, title: 'evp-token-minner-service', category: 'Micro-Service', projectUrl: 'https://github.com/PixelDat/evp-token-minner-service.git', sourceCodeUrl: 'https://github.com/PixelDat/evp-token-minner-service.git' },
+              { tags: ['microservice', 'blockchain-app'], image: evp_match_reward_token_minner_service_flow_chart, title: 'evp-match-reward-token-minner-service', category: 'Micro-Service', projectUrl: 'https://github.com/PixelDat/evp-match-reward-token-minner-service.git', sourceCodeUrl: 'https://github.com/PixelDat/evp-match-reward-token-minner-service.git' },
+
+              // New contract items
+              { tags: ['contract', 'blockchain-app'], image: gv_nfts, title: 'GV_NFTs', category: 'Smart Contract', projectUrl: 'https://github.com/lambo10/Greedyverse-contracts.git', sourceCodeUrl: 'https://github.com/lambo10/Greedyverse-contracts.git' },
+              { tags: ['contract', 'blockchain-app'], image: gv_seed_sale, title: 'GV_SeedSale', category: 'Smart Contract', projectUrl: 'https://github.com/lambo10/Greedyverse-contracts.git', sourceCodeUrl: 'https://github.com/lambo10/Greedyverse-contracts.git' },
+
+              { tags: ['microservice', 'blockchain-app'], image: pos_blockchain, title: 'Proof of Stake Chain Development', category: 'Full Blockchain', projectUrl: 'https://github.com/lambo10/PosBlockchain.git', sourceCodeUrl: 'https://github.com/lambo10/PosBlockchain.git' },
+
             ].filter(item => activeFilter === 'all' || item.tags.includes(activeFilter)).map((item, index) => (
               <div key={index} className="bg-[#28212e] rounded-lg overflow-hidden">
                 <div className="relative h-48 md:h-64">
@@ -198,18 +221,22 @@ export default function Home() {
                   <span className="text-green-500 text-xs md:text-sm uppercase">{item.category}</span>
                   <h3 className="text-lg md:text-xl font-bold mt-2">{item.title}</h3>
                   <div className="flex flex-col md:flex-row md:space-x-4 mt-4">
-                    <Link href="#" className="inline-flex items-center text-green-500 hover:underline text-sm md:text-base mb-2 md:mb-0">
-                      See project
-                      <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                      </svg>
-                    </Link>
-                    <Link href="#" className="inline-flex items-center text-green-500 hover:underline text-sm md:text-base">
-                      Source Code
-                      <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-                      </svg>
-                    </Link>
+                    {item.projectUrl && (
+                      <Link href={item.projectUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-green-500 hover:underline text-sm md:text-base mb-2 md:mb-0">
+                        See project
+                        <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                      </Link>
+                    )}
+                    {item.sourceCodeUrl && (
+                      <Link href={item.sourceCodeUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-green-500 hover:underline text-sm md:text-base">
+                        Source Code
+                        <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                        </svg>
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>
