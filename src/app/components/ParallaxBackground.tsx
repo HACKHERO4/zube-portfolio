@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import parallaxImage1 from '../images/parallax-image1.png';
+import artistic from '../images/artistic.jpg';
 import parallaxImage3 from '../images/parallax-image3.png';
 import parallaxImage5 from '../images/parallax-image5.png';
 import pumpmwebmobile1 from '../images/pumpmwebmobile1.png';
@@ -11,14 +11,15 @@ import pumpmwebmobile3 from '../images/pumpmwebmobile3.png';
 import pumpmwebmobile4 from '../images/pumpmwebmobile4.png';
 // Import additional images as needed
 
+
 const ParallaxBackground: React.FC = () => {
   const columns = [
     {
       images: [
-        parallaxImage1,
+        artistic,
         parallaxImage3,
         parallaxImage5,
-        parallaxImage1,
+        artistic,
         parallaxImage3,
         parallaxImage5, // Ensures seamless looping
       ],
@@ -38,10 +39,10 @@ const ParallaxBackground: React.FC = () => {
     {
       images: [
         parallaxImage5,
-        parallaxImage1,
+        artistic,
         parallaxImage3,
         parallaxImage5,
-        parallaxImage1,
+        artistic,
         parallaxImage3, // Ensures seamless looping
       ],
       speed: 30, // Animation duration in seconds for column 3

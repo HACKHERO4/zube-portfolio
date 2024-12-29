@@ -18,7 +18,7 @@ const geistMono = localFont({
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Lambert Nnadi - Web, Blockchain, Mobile & Game Developer',
+  title: 'Gideon Nnadi - Web, Mobile, UIUX & Game Developer',
   description: 'I have rich experience in web, blockchain and mobile application development. I also have 6 years of experience in game development using Unity. I love to talk with you about your unique projects and how we can collaborate to bring your ideas to life.',
   icons: [
     {
