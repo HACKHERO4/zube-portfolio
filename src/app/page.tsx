@@ -162,9 +162,11 @@ export default function Home() {
             {/* Web Development */}
             <div className="bg-[#28212e] rounded-lg p-6 relative overflow-hidden">
               <div className="relative z-10">
-                <h3 className="text-xl font-bold mb-10">WEB DEVELOPMENT</h3>
-                <h4 className="text-lg font-semibold mb-2">Web Design & Logo</h4>
-                <p className="mb-4">Web designers craft the overall vision & plan for a website layout. Professional logo development: Business, Company, or Personal.</p>
+                <h3 className="text-xl font-bold mb-10">Game Development</h3>
+                <h4 className="text-lg font-semibold mb-2">Game Developer</h4>
+                <p className="mb-4">Designed and implemented core gameplay mechanics, including player 
+                  controls, physics interactions, and AI behavior
+                   for a mobile adventure game.</p>
                 
               </div>
               <div className="absolute bottom-0 left-0 w-24 h-24 opacity-10">
@@ -180,7 +182,7 @@ export default function Home() {
             {/* Apps Development */}
             <div className="bg-[#28212e] rounded-lg p-6 relative overflow-hidden">
               <div className="relative z-10">
-                <h3 className="text-xl font-bold mb-10">APPS DEVELOPMENT</h3>
+                <h3 className="text-xl font-bold mb-10">Apps Development</h3>
                 <h4 className="text-lg font-semibold mb-2">iOS & Android</h4>
                 <p className="mb-4">Design Software applications to run on mobile devices. Modern and mobile-ready application that will help you reach all of your marketing.</p>
                 
@@ -265,7 +267,7 @@ export default function Home() {
       </section>
       {/* Footer section */}
       <footer className="relative bg-[#1e2024] text-white py-8">
-        <div className="absolute inset-0 bg-[#00000c]"></div>
+        <div className="absolute inset-0 bg-[#1c1e27]"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex space-x-4 mb-4 md:mb-0">
