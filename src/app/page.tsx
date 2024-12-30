@@ -10,7 +10,6 @@ import PortfolioGrid from './PortfolioGrid';
 import { jost } from './fonts';
 import { Allura } from 'next/font/google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import SplineEmbed from './SplineEmbed';
 import './port.css';
 import {
   faWhatsapp,
@@ -223,10 +222,6 @@ export default function Home() {
       </section>
 
 
-      <section className='relative  inset-0 bg-[#00000c]'>
-      <SplineEmbed/>
-      <div className='gyt'></div>
-</section>
 
 
 
